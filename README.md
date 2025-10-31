@@ -1,2 +1,4 @@
 # Tairis — Group Project
 
+Project Description:
+Our project, Doctor-Free First Aid Decision Tree, is a web-based system designed to guide users through basic first-aid steps in emergency situations without needing a doctor immediately. It uses a decision-tree structure where users answer simple questions (like “Is the person bleeding?” or “Is the burn severe?”), and based on their responses, the system suggests the correct first-aid action. The project is built using React for the frontend, Express.js for the backend, and Prisma with MySQL for managing the data. Each question and option is stored in the database, allowing the app to display the next step dynamically. This makes it easy for anyone to quickly get reliable first-aid help through an interactive and user-friendly interface.
