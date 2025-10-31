@@ -1,4 +1,57 @@
-# Tairis — Group Project
+# Tairis
 
-Project Description:
-Our project, Doctor-Free First Aid Decision Tree, is a web-based system designed to guide users through basic first-aid steps in emergency situations without needing a doctor immediately. It uses a decision-tree structure where users answer simple questions (like “Is the person bleeding?” or “Is the burn severe?”), and based on their responses, the system suggests the correct first-aid action. The project is built using React for the frontend, Express.js for the backend, and Prisma with MySQL for managing the data. Each question and option is stored in the database, allowing the app to display the next step dynamically. This makes it easy for anyone to quickly get reliable first-aid help through an interactive and user-friendly interface.
+Doctor-Free First Aid Decision Tree
+
+## Overview
+Tairis is a web-based application designed to guide users through basic first-aid steps in emergency situations, without needing a doctor immediately. The app uses an interactive decision-tree structure, where users answer simple questions and receive step-by-step first-aid instructions tailored to their situation.
+
+## Features
+- Interactive decision tree for emergency first-aid
+- Step-by-step guidance based on user responses
+- User-friendly and fast interface
+- Built with React (frontend), Express.js (backend), Prisma & MySQL (database)
+
+## Getting Started
+
+### Prerequisites
+- Node.js & npm
+- MySQL (for backend database)
+
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/mrgear111/tairis.git
+   cd tairis
+   ```
+2. Install dependencies for frontend and backend:
+   ```sh
+   cd frontend && npm install
+   cd ../backend && npm install
+   ```
+3. Set up your MySQL database and update the connection string in `backend/prisma/schema.prisma`.
+4. Run database migrations:
+   ```sh
+   npx prisma migrate dev
+   ```
+5. Start the backend server:
+   ```sh
+   node server.js
+   ```
+6. Start the frontend:
+   ```sh
+   cd ../frontend
+   npm run dev
+   ```
+
+## Project Structure
+```
+/README.md                # Project overview
+/backend/                 # Express.js backend & Prisma ORM
+/frontend/                # React + Vite frontend
+```
+
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+MIT
