@@ -21,7 +21,7 @@
 .navbar-logo a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: -1px;
   display: flex;
@@ -52,7 +52,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.15rem;
   transition: all 0.3s ease;
   padding: 0.5rem 0;
 }
@@ -76,32 +76,23 @@
   width: 100%;
 }
 
-/* Auth Buttons */
-.login-btn {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  padding: 0.6rem 1.4rem;
-  cursor: pointer;
-}
-
-.login-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.signup-btn {
-  background: #fff;
+/* Auth Button */
+.auth-btn {
+  background: linear-gradient(135deg, #fff 0%, #f0f4ff 100%);
   color: #6366f1;
   border-radius: 8px;
-  padding: 0.6rem 1.4rem;
+  padding: 0.6rem 1.6rem;
   font-weight: 600;
   cursor: pointer;
+  border: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.signup-btn:hover {
-  background: #e0e7ff;
+.auth-btn:hover {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 /* Hamburger Menu */
@@ -168,7 +159,8 @@
   }
 
   .login-btn,
-  .signup-btn {
+  .signup-btn,
+  .auth-btn {
     margin: 0.5rem 0;
     display: block;
   }
@@ -184,7 +176,7 @@
 
 @media (max-width: 480px) {
   .navbar-logo a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .nav-menu {
@@ -192,6 +184,6 @@
   }
 
   .nav-link {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
