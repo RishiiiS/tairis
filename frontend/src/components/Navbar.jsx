@@ -16,7 +16,7 @@ function Navbar() {
           <Link to="/">Tairis</Link>
         </div>
 
-        <button className="hamburger" onClick={toggleMenu}>
+        <button className={`hamburger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>

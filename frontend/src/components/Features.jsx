@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./styles/features.css";
 
 function Features() {
@@ -64,7 +65,7 @@ function Features() {
         <div className="features-header">
           <h2>Tairis</h2>
           <p>Everything you need for medical emergencies</p>
-          <button className="header-btn">Get Started</button>
+          <Link to="/get-started" className="header-btn">Get Started</Link>
         </div>
 
         <div className="features-grid">
