@@ -29,6 +29,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/nearby-doctors" className="nav-link">
+              Nearby Doctors
+            </Link>
+          </li>
+          <li className="nav-item">
             <a href="/" className="nav-link">
               About
             </a>
