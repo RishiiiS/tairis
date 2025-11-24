@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StartPage from './components/startpage.jsx';
 import Auth from './pages/Auth.jsx';
+import GetStarted from './pages/GetStarted.jsx';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/signup" element={<Auth />} />
+        <Route path="/get-started" element={<GetStarted />} />
       </Routes>
     </Router>
   );

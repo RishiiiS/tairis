@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.getstarted-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.resizer {
+  width: 5px;
+  cursor: col-resize;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.resizer:hover,
+.resizer:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.getstarted-container {
+  flex: 1;
+  min-height: 100vh;
+  background: transparent;
+  /* Let wrapper gradient show through or match it */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.empty-state h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-form {
+  width: 100%;
+  max-width: 768px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 26px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.chat-form:focus-within {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+}
+
+.chat-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.plus-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.right-icons {
+  display: flex;
+  gap: 4px;
+}
+
+/* Chat View Styles */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: 70%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.bot-message .message-content {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 20px;
+  padding: 12px 20px;
+  max-width: 70%;
+  line-height: 1.6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.message-time {
+  display: none;
+}
+
+.bottom-form {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.send-btn-icon {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06b6d4;
+  /* Theme color for icon */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .getstarted-container {
+    padding: 10px;
+  }
+
+  .empty-state h1 {
+    font-size: 1.5rem;
+  }
+
+  .chat-form {
+    border-radius: 20px;
+  }
+}
