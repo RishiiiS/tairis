@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ChatHistory from "../components/ChatHistory";
 import "../styles/getstarted.css";
 import arrowBtn from "../assets/arrow_btn.png";
 
 function GetStarted() {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -20,11 +21,17 @@ function GetStarted() {
 
   // Load chats from localStorage on component mount
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/auth");
+      return;
+    }
+
     const savedChats = localStorage.getItem("chatHistory");
     if (savedChats) {
       setChats(JSON.parse(savedChats));
     }
-  }, []);
+  }, [navigate]);
 
   // Scroll to bottom when messages change
   useEffect(() => {

@@ -49,7 +49,10 @@ function Auth() {
       });
 
       if (response.ok) {
-        navigate("/dashboard");
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        navigate("/get-started");
       } else {
         const data = await response.json();
         setLoginError(data.msg || "Invalid email or password");

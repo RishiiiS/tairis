@@ -1,27 +1,26 @@
-const User = require('../models/User');
-
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const supabase = require('../config/supabase');
 
 const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    const exists = await User.findOne(
-        { email }
-    );
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: name,
+        },
+      },
+    });
 
-    if (exists){
-         return res.status(400).json({ msg: "Email exists" });
+    if (error) {
+      return res.status(400).json({ msg: error.message });
     }
 
+    // User profile creation is now handled by a Supabase Database Trigger
 
-    const hash = await bcrypt.hash(password, 10);
-
-    const user = await User.create({ name, email, password: hash });
-
-    res.status(201).json({ msg: "User registered", userId: user._id });
-
+    res.status(201).json({ msg: "User registered! Please check your email to verify your account.", user: data.user });
 
   } catch (err) {
     res.status(500).json({ msg: "Error", error: err.message });
@@ -31,30 +30,24 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email });
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-    if (!user) return res.status(400).json({ msg: "Invalid email or password" });
+    if (error) {
+      return res.status(400).json({ msg: error.message });
+    }
 
-    const match = await bcrypt.compare(password, user.password);
-
-    if (!match) return res.status(400).json({ msg: "Invalid email or password" });
-
-    const token = jwt.sign(
-      { id: user._id, email: user.email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" }
-    );
-
-    res.json({ msg: "Login successful", token });
+    res.json({ msg: "Login successful", token: data.session.access_token, user: data.user });
   } catch (err) {
     res.status(500).json({ msg: "Error", error: err.message });
   }
 };
 
 module.exports = {
-    register,
-    login
+  register,
+  login
 }
