@@ -18,37 +18,37 @@ function Features() {
       id: 1,
       title: "Instant First-Aid Guidance",
       description: "Get immediate, reliable first-aid guidance for common emergencies",
-      icon: "⚡"
+      icon: "1"
     },
     {
       id: 2,
       title: "Interactive Question Flow",
       description: "Question-based flow that adapts to your responses for personalized guidance",
-      icon: "❓"
+      icon: "2"
     },
     {
       id: 4,
       title: "Multiple Emergency Categories",
       description: "Coverage for cuts, burns, choking, fractures, and many more emergencies",
-      icon: "🏥"
+      icon: "3"
     },
     {
       id: 5,
       title: "Fast & User-Friendly",
       description: "Intuitive interface designed for quick access during emergencies",
-      icon: "⚙️"
+      icon: "4"
     },
     {
       id: 6,
       title: "Safety-Focused Suggestions",
       description: "Includes actions to take and critical actions to avoid",
-      icon: "🛡️"
+      icon: "5"
     },
     {
       id: 9,
       title: "Emergency Contacts",
       description: "Quick access to essential emergency contact information",
-      icon: "☎️"
+      icon: "6"
     }
   ];
 
