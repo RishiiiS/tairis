@@ -255,23 +255,27 @@
 
 
 .feature-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90px;
   height: 90px;
-  background: #fff;
+  background: var(--primary-gradient);
+  color: #ffffff;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
   position: relative;
   z-index: 1;
 }
 
 .feature-card:hover .feature-icon {
   transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-card h3 {

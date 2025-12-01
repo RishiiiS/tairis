@@ -23,7 +23,7 @@ function About() {
                     <h2>Key Features</h2>
                     <div className="features-grid">
                         <div className="feature-card">
-                            <div className="feature-icon">🌳</div>
+                            <div className="feature-icon">1</div>
                             <h3>Interactive Decision Tree</h3>
                             <p>
                                 Navigate through emergency first-aid scenarios with our intelligent decision tree system
@@ -31,7 +31,7 @@ function About() {
                             </p>
                         </div>
                         <div className="feature-card">
-                            <div className="feature-icon">📋</div>
+                            <div className="feature-icon">2</div>
                             <h3>Step-by-Step Guidance</h3>
                             <p>
                                 Receive clear, actionable instructions based on your specific emergency situation,
@@ -39,7 +39,7 @@ function About() {
                             </p>
                         </div>
                         <div className="feature-card">
-                            <div className="feature-icon">⚡</div>
+                            <div className="feature-icon">3</div>
                             <h3>Fast & User-Friendly</h3>
                             <p>
                                 Built with a focus on speed and simplicity, so you can get the help you need
@@ -47,7 +47,7 @@ function About() {
                             </p>
                         </div>
                         <div className="feature-card">
-                            <div className="feature-icon">🏥</div>
+                            <div className="feature-icon">4</div>
                             <h3>Find Nearby Doctors</h3>
                             <p>
                                 Quickly locate medical professionals in your area when professional care is needed.

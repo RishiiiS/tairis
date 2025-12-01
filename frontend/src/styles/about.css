@@ -97,10 +97,21 @@
 }
 
 .feature-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 16px;
-  color: var(--primary-color);
-  animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
 }
 
 .feature-card h3 {
